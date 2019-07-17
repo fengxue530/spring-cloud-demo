@@ -1,0 +1,15 @@
+
+server:
+  port: 8099
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      label: master  #配置仓库分支
+      server:
+        git:
+          uri: https://github.com/fengxue530/spring-cloud-demo   # 配置git仓库地址
+          search-paths: config/testrepo                           #配置文件所在的目录
+          #username:     开放项目不需要
+          #password:
