@@ -1,6 +1,8 @@
 
 server:
   port: 8099
+  tomcat:
+    uri-encoding: UTF-8  #解决http响应数据中文乱码问题  第一步
 spring:
   application:
     name: config-server
@@ -13,3 +15,9 @@ spring:
           search-paths: config/testrepo                           #配置文件所在的目录
           #username:     开放项目不需要
           #password:
+
+  http:              #解决http响应数据中文乱码问题 第二步
+    encoding:
+      charset: UTF-8
+      force: true
+      enabled: true
