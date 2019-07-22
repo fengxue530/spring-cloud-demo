@@ -33,6 +33,8 @@ public class DemoController {
         remoteCgfMap.put("clientUserName", userName);
         remoteCgfMap.put("clientPassword", password);
         model.put("remoteConfig",remoteCgfMap);
+
+        System.out.println("===============我的第一次提交");
         return model;
     }
 }
