@@ -1,6 +1,7 @@
 package com.fx.configclient.controller;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -32,8 +33,6 @@ public class DemoController {
         remoteCgfMap.put("clientUserName", userName);
         remoteCgfMap.put("clientPassword", password);
         model.put("remoteConfig",remoteCgfMap);
-
-        System.out.println("===============我的第一次提交");
         return model;
     }
 }
